@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="pharmacy.master.cs" Inherits="pharmacy" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!-- CuFon: Enables smooth pretty custom font rendering. 100% SEO friendly. To disable, remove this section -->
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<!-- CuFon ends -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!-- CuFon: Enables smooth pretty custom font rendering. 100% SEO friendly. To disable, remove this section -->
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<!-- CuFon ends -->
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo"><h1><a href="index.html"><span>CLINIC</span> GETWELL<br /><small>Put your Health Here</small></a></h1></div>
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li>
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" ForeColor="#660066">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/phhome.aspx" Text="Home" Value="Home">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/phprescription.aspx" Text="Prescription" 
+                    Value="New Item"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/phmedicine.aspx" Text="Medicine" Value="New Item">
+                    <asp:MenuItem NavigateUrl="~/phmedicine.aspx" Text="Add" Value="Add">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/phmedupdate.aspx" Text="Edit/Remove" 
+                        Value="Edit/Remove"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Account" Value="Account">
+                    <asp:MenuItem NavigateUrl="~/phpasswordchange.aspx" Text="Password Change" 
+                        Value="Password Change"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/inhome.aspx" Text="Logout" Value="New Item">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu></li>
+        </ul>
+      </div>
+    <div class="headert_text_resize"> 
+    &nbsp;</div>
+    <div class="clr"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+    </div>
+  </div>
+</div>
+  </form>
+</body>
+</html>
